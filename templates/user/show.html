@@ -1,0 +1,16 @@
+{% extends "../layout/app.html" %}
+{% block yield %}
+  <h1>Show Users</h1>
+  <table>
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+        <a href="{{ user.id }}/destroy" onclick="confirm();">destroy</a>
+        <a href="{{ user.id }}/edit">edit</a>
+      </td>
+    </tr>
+  </table>
+  <a href="/users">Back</a>
+{% end %}

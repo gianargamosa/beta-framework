@@ -1,0 +1,22 @@
+{% extends "../layout/app.html" %}
+{% block yield %}
+  {% if errors %}
+    {% for error, message in errors %}
+      <font style="color: red;">{{ message }}</font><br>
+    {% end %}
+  {% end %}
+  <h1>New Users</h1>
+  <form action="/users" method="POST">
+    {% module xsrf_form_html() %}
+    <label>Name:</label><br>
+    <input type="text" name="username"><br>
+    <label>E-mail:</label><br>
+    <input type="text" name="email"><br>
+    <label>Password:</label><br>
+    <input type="password" name="password"><br>
+    <label>Re-type Password:</label><br>
+    <input type="password" name="confirm_password"><br><br>
+    <input type="submit" name="submit">
+  </form>
+  <a href="/users">Back</a>
+{% end %}

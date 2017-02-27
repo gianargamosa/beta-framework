@@ -1,0 +1,23 @@
+{% extends "../layout/app.html" %}
+{% block yield %}
+  <h1>Listing Users</h1>
+  <a href="users/new">New User</a>
+  <table border="0">
+    <tr>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Action</td>
+    </tr>
+    {% for user in users %}
+      <tr>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <a href="users/{{ user.id }}">show</a>
+          <a href="users/{{ user.id }}/edit">edit</a>
+          <a href="users/{{ user.id }}/destroy">delete</a>
+        </td>
+      </tr>
+    {% end %}
+  </table>
+{% end %}
