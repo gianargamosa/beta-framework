@@ -2,7 +2,7 @@ import json
 
 from utils import FormError
 
-class Validator(object):
+class Validates(object):
     """Unbound form object.
     Does not store data or errors, just fields.
     """

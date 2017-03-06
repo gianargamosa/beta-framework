@@ -1,5 +1,6 @@
 import restor
-from server import *
+from controllers.HomeController import HomeController
+from controllers.UsersController import UsersController
 
 routes = [
   (restor.routes('/'), HomeController),

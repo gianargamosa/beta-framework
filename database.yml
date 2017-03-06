@@ -1,6 +1,6 @@
-MYSQL:
-  DB_HOST: 127.0.0.1
-  DB_USERNAME: root
-  DB_PASSWORD: th3sad0n3
-  DB_DATABASE: friendfeed
-  DB_PORT: 3306
+mysql:
+  host: 127.0.0.1
+  username: root
+  password: th3sad0n3
+  database: friendfeed
+  port: 3306
